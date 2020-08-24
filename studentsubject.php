@@ -147,10 +147,6 @@
 												echo '<tr>';
 
 												echo '<td width="15%">';
-												 // if($_SESSION['ACCOUNT_TYPE']=='Administrator'){
-
-												// echo '<input type="checkbox" name="selector[]" id="selector[]" value="'.$result->GRADE_ID. '"/>';
-												// }
 											  	echo get_course($result->SUBJ_ID,"SUBJ_CODE") .'</td>';
 												echo '<td width="30%">'. get_course($result->SUBJ_ID,"SUBJ_DESCRIPTION").'</td>';
 											  	echo '<td>'.$result->FIRST.'</td>';
