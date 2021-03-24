@@ -138,12 +138,13 @@ $(document).ready(function() {
           <ul class="nav navbar-nav">
             <li class="active"><a href="eportal.php">Home</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">View<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="<?php echo WEB_ROOT; ?>eportal">E-portal Home</a></li>
+              <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">View<b class="caret"></b></a> -->
+                <!-- <ul class="dropdown-menu"> -->
+                  <li><a href="<?php echo WEB_ROOT; ?>home">Student</a></li>
                   <!-- <li><a href="<?php echo WEB_ROOT; ?>eportal.php?eportal-page=course_registration">Course Registration</a></li> -->
-                  <li><a href="<?php echo WEB_ROOT; ?>eportal.php?eportal-page=admission_application">Admission Application</a></li>
-                </ul>  
+                  <li><a href="<?php echo WEB_ROOT; ?>admin">Staff</a></li>
+                  <li><a href="<?php echo WEB_ROOT; ?>eportal.php?eportal-page=admission_application">Enroll Again</a></li>
+                <!-- </ul>   -->
               
 
             </li>
@@ -156,14 +157,7 @@ $(document).ready(function() {
                 </ul>  
 
             </li>-->
-            <li class="dropdown">
-              <a href="login.php" >students login</a>
-                
-                 <!--  <li><a href="#.php">New Enrolment</a></li> 
-                             
-                </ul>  
-
-            </li>
+            
       <!--       <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grade<b class="caret"></b></a>
                 <ul class="dropdown-menu">

@@ -36,9 +36,13 @@
 
 							  echo '<td>'. $schoolyr->AY.'</td>';
 
-							  echo '<td><a href = "index.php?page=4&studentId='.$schoolyr->IDNO.'&SY='.$schoolyr->AY.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'">Registered Courses</a>
-							  <a href = "index.php?page=5&studentId='.$schoolyr->IDNO.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'&ay='.$schoolyr->AY.'&ay='.$schoolyr->AY.'">Vew Transcript</a></td>';
-							  echo '</tr>';
+							//   echo '<td><a href = "index.php?page=4&studentId='.$schoolyr->IDNO.'&SY='.$schoolyr->AY.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'">Registered Courses</a>
+							//   <a href = "index.php?page=5&studentId='.$schoolyr->IDNO.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'&ay='.$schoolyr->AY.'&ay='.$schoolyr->AY.'">Vew Transcript</a></td>';
+							//   echo '</tr>';
+
+							echo '<td><a href = "index.php?page=4&studentId='.$schoolyr->IDNO.'&SY='.$schoolyr->AY.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'">Registered Courses</a>
+							<a href = "trans2.php?&studentId='.$schoolyr->IDNO.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'&ay='.$schoolyr->AY.'&ay='.$schoolyr->AY.'">Vew Transcript</a></td>';
+							echo '</tr>';
 						  } 
 				  	?>
 				  </tbody>

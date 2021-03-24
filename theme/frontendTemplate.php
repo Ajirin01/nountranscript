@@ -98,13 +98,13 @@ $(document).ready(function() {
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.php">Home</a></li>
-            <li class="dropdown">
+            <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">View<b class="caret"></b></a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu"> -->
                   <li><a href="<?php echo WEB_ROOT; ?>index.php?page=2">Profile</a></li>
                   <li><a href="<?php echo WEB_ROOT; ?>index.php?page=3">Record</a></li>
                   <!-- <li><a href="<?php echo WEB_ROOT; ?>index.php?page=3&studentId=<?php echo $_SESSION['IDNO']; ?>">Course Registration</a></li> -->
-                </ul>  
+                <!-- </ul>   -->
               
 
             </li>

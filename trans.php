@@ -13,7 +13,12 @@
     <title>Student Transcript</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="fonts/glyphicons-halflings-regular.ttf">
+
+    <link rel="stylesheet" href="css/signature.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
 <style type="text/css">
 body { 
 background-image: url(); 
@@ -65,7 +70,10 @@ margin-top: 0cm;
 
 
   ?>
-    <div class="container">
+    <div class="text text-primary text-right" style="font-size: 2rem">
+      <i class="glyphicon glyphicon-print"></i> <span>print</span>
+    </div>
+    <div class="container" id="el" style="background-image: url('uploads/noun_bg.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat">
 
       <div class="page-header">
      <hr>
@@ -315,14 +323,89 @@ margin-top: 0cm;
     </tr> 
     
 </table>
-
+    </div>
     </div> <!-- /container -->
 
+       <!-- Content -->
+       <div  id="ex1" class="modal">
+        <div class="container">
+            <div class="row">
+                <div class="col-sx-12 col-md-12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>E-Signature</h1>
+                            <p>Sign in the canvas below and save your signature as an image!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <canvas id="sig-canvas" width="inherit" height="160">
+                                Get a better browser, bro.
+                            </canvas>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-primary" id="sig-submitBtn">Submit Signature</button>
+                            <button class="btn btn-default" id="sig-clearBtn">Clear Signature</button>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <textarea id="sig-dataUrl" class="form-control" rows="5">Data URL for your signature will go here!</textarea>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img id="sig-image" src="" alt="Your signature will go here!"/>
+                        </div>
+                    </div>
+    
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="m-t-20"> <a href="#" id="continue" class="btn btn-primary text-center" rel="modal:close">Continue</a></div>
+        <div class="m-t-20"> <a href="#" id="" class="btn btn-danger text-center" rel="modal:close">Cancel</a></div>
+    </div>
 
+    <div class="">
+        <div class="col-md-12">
+            <img id="signature" src="" alt="Your signature will go here!"/>
+
+            <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+        </div>
+    </div>
+
+
+    <!-- <div class="text text-primary text-right" style="font-size: 2rem">
+      <i class="glyphicon glyphicon-print"></i> <span>print</span>
+    </div> -->
+
+    <form action="/test-img-pdf" method="POST">
+        <div class="text text-primary text-right" style="font-size: 2rem">
+            <i class="glyphicon glyphicon-print"></i> <span><input type="submit" value="print" name="print" style="background:
+            transparent; border: none"></span>
+        </div>
+        <textarea name="element" id="element" cols="30" rows="10" style="display: none"></textarea>
+    </form>
+
+    <script>
+        var element = document.getElementById('element')
+        var el = document.getElementById('el')
+
+        console.log(el)
+        element.innerHTML = (el.innerHTML)
+    </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../../assets/js/jquery.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/signature.js"></script>
   </body>
 </html>

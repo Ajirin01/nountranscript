@@ -1,6 +1,6 @@
 <?php check_message(); ?>
-<div class="row row-offcanvas row-offcanvas-middle">
-<div class="col-xs-12 col-sm-12 sidebar-offcanvas" id="sidebar" role="navigation">
+<div class="row" style="margin-top: 100px">
+<div class="col-xs-12 col-sm-12" id="sidebar" role="navigation">
 	<div class="sidebar-nav">
 		<div class="panel panel-success">
 					

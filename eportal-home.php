@@ -8,7 +8,7 @@
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>The Roots of Education are Bitter, But the Fruit is Sweet</h1>
-									<p><a class="btn btn-primary btn-lg" href="<?php echo WEB_ROOT; ?>eportal.php?eportal-page=admission_application">Apply now!</a></p>
+									<p><a class="btn btn-primary btn-lg" href="<?php require_once('includes/config.php'); echo WEB_ROOT; ?>eportal.php?eportal-page=admission_application">Apply now!</a></p>
 			   				</div>
 			   			</div>
 			   		</div>

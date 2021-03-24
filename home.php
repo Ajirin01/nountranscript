@@ -1,4 +1,8 @@
-<?php //include 'banner.php';?>
+<?php //include 'banner.php';
+	if(!isset($_SESSION['IDNO'])){
+		header('location: /login');
+	}
+?>
 <div class="container" style="margin-top: 50px">
 	<div class="row">
 	

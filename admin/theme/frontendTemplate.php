@@ -43,7 +43,12 @@ $(document).ready(function() {
   <?php
   //login confirmation
  confirm_logged_in();
-
+//  Encoder
+//  Administrator
+//  Registrar
+//  Student
+//  Teacher
+  // echo $_SESSION['ACCOUNT_TYPE'] == "Course In-charge";
   ?>
 </head>
 
@@ -62,55 +67,37 @@ $(document).ready(function() {
           <ul class="nav navbar-nav">
             <li class="active"><a href="<?php echo WEB_ROOT; ?>admin/index.php">Home</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entry<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="<?php echo WEB_ROOT; ?>admin/modules/student/index.php">Student</a></li>
+              <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entry<b class="caret"></b></a>
+                <ul class="dropdown-menu"> -->
+                  <?php 
+                    if($_SESSION['ACCOUNT_TYPE'] == "Course In-charge"){
+                      echo "<li><a href='". WEB_ROOT ."admin/modules/course/index.php'>Course</a></li>";
+                    }else if($_SESSION['ACCOUNT_TYPE'] == "Teacher"){
+                      echo "<li><a href='". WEB_ROOT ."admin/modules/student/index.php'>Student</a></li>";
+                    }else if($_SESSION['ACCOUNT_TYPE'] == "Administrator"){
+                      echo "<li><a href='". WEB_ROOT ."admin/modules/student/index.php'>Student</a></li>";
+                      echo "<li><a href='". WEB_ROOT ."admin/modules/course/index.php'>Course</a></li>";
+                      echo "<li><a href='". WEB_ROOT ."admin/modules/level/index.php'>Level</a></li>";
+                      echo "<li><a href='". WEB_ROOT ."admin/modules/faculty/index.php'>Faculty</a></li>";
+                      echo "<li><a href='". WEB_ROOT ."admin/modules/lecturer/index.php'>Lecturer</a></li>";
+                      echo "<li><a href='". WEB_ROOT ."admin/modules/department/index.php'>Department</a></li>";
+                      echo "<li><a href='". WEB_ROOT ."admin/modules/admission/index.php'>Admission</a></li>";
+                    }
+                  ?>
+                  <!-- <li><a href="<?php echo WEB_ROOT; ?>admin/modules/student/index.php">Student</a></li>
                   <li><a href="<?php echo WEB_ROOT; ?>admin/modules/course/index.php">Course</a></li>
                   <li><a href="<?php echo WEB_ROOT; ?>admin/modules/level/index.php">Level</a></li>
                   <li><a href="<?php echo WEB_ROOT; ?>admin/modules/faculty/index.php">Faculty</a></li>
                   <li><a href="<?php echo WEB_ROOT; ?>admin/modules/instructor/index.php">Lecturer</a></li>
                   <li><a href="<?php echo WEB_ROOT; ?>admin/modules/department/index.php">Department</a></li>
                   <li><a href="<?php echo WEB_ROOT; ?>admin/modules/room/index.php">Rooms</a></li>
-                  <li><a href="<?php echo WEB_ROOT; ?>admin/modules/admission/index.php">Admission processing</a></li>
-                </ul>  
+                  <li><a href="<?php echo WEB_ROOT; ?>admin/modules/admission/index.php">Admission processing</a></li> -->
+                <!-- </ul>  
 
-            </li>
-          <!--   <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="newenrollment.php">Reservation</a></li>
-               
-                             
-                </ul>  
+            </li> -->
 
-            </li>-->
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Class<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                   <li><a href="<?php echo WEB_ROOT; ?>admin/modules/class/index.php">List of class</a></li>
-                 <!--  <li><a href="#.php">New Enrolment</a></li> -->
-                             
-                </ul>  
+            
 
-            </li>
-      <!--       <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grade<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#.php">New Enrolment</a></li>
-                             
-                </ul>  
-
-            </li>-->
-             <!--
-             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Schedule<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#.php">New Enrolment</a></li>
-                     <li><a href="scheduleSubFilter.php">New Schedule</a></li>         
-                </ul>  
-
-            </li>-->
-                      
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
               <ul class="dropdown-menu">
