@@ -1,22 +1,25 @@
 <div class="container">
-<div class="well">
+    <div class="col-12">
 
-			    <form action="controller.php?action=delsy&studentId=<?php echo $_GET['studentId']; ?>" Method="POST">  					
-				<table class="table table-hover">
-					<caption><h3 align="left">Student Enrollment Records</h3></caption>
-				  <thead>
-				  	<tr>
-				  		<th> <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');"> Grade and Section</th>
-				  	<!--	<th>Semester</th>-->
-				  		<th>Schoolyr</th>
-				  		<th>Status</th>
-				  		<th>Date Enrolled</th>
-				  		<th>Options</th>
-				 
-				  	</tr>	
-				  </thead>
-				  <tbody>
-					  <?php 
+        <form action="controller.php?action=delsy&studentId=<?php echo $_GET['studentId']; ?>" Method="POST">
+            <table class="table table-hover">
+                <caption>
+                    <h3 align="left">Student Enrollment Records</h3>
+                </caption>
+                <thead>
+                    <tr>
+                        <th> <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');">
+                            Grade and Section</th>
+                        <!--	<th>Semester</th>-->
+                        <th>Schoolyr</th>
+                        <th>Status</th>
+                        <th>Date Enrolled</th>
+                        <th>Options</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
 					  function get_level($level_id){
 						  global $mydb;
 						$mydb->setQuery("SELECT * FROM `level` WHERE YR_ID='$level_id' ");
@@ -55,10 +58,10 @@
 						  echo '</tr>';
 				  	} 
 				  	?>
-				  </tbody>
-				 	
-				</table>
-				<?php
+                </tbody>
+
+            </table>
+            <?php
 				if($_SESSION['ACCOUNT_TYPE']=='Administrator') {
 		
 			echo   '<div class="btn-group">
@@ -68,7 +71,9 @@
 				
 				 }
 				?>
-				</form>
-	  	</div><!--End of well-->
+        </form>
+    </div>
+    <!--End of well-->
 
-</div><!--End of container-->
+</div>
+<!--End of container-->

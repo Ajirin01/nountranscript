@@ -45,8 +45,6 @@ switch ($view) {
 				
 }
 
-require_once '../../theme/frontendTemplate.php';
+// require_once '../../theme/frontendTemplate.php';
+require_once '../../theme/adminfrontendTemplate.php';
 ?>
-
-
-  

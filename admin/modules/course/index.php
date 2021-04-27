@@ -25,8 +25,6 @@ switch ($view) {
 	default :
 		$content    = 'list.php';		
 }
-require_once '../../theme/frontendTemplate.php';
+// require_once '../../theme/frontendTemplate.php';
+require_once '../../theme/adminfrontendTemplate.php';
 ?>
-
-
-  

@@ -1,18 +1,20 @@
-<div class="well">
+<div class="col-12">
 
-			    <form action="controller.php?action=delsy&studentId=<?php echo $_SESSION['IDNO']; ?>" Method="POST">  					
-				<table class="table table-hover">
-					<caption><h3 align="left">Student Enrollment Records</h3></caption>
-				  <thead>
-				  	<tr>
-				  		<th> Grade and Section</th>
-				  		<th>Schoolyr</th>
-				  		<th>Options</th>
-				 
-				  	</tr>	
-				  </thead>
-				  <tbody>
-					  <?php 
+    <form action="controller.php?action=delsy&studentId=<?php echo $_SESSION['IDNO']; ?>" Method="POST">
+        <table class="table table-hover">
+            <caption>
+                <h3 align="left">Student Enrollment Records</h3>
+            </caption>
+            <thead>
+                <tr>
+                    <th> Grade and Section</th>
+                    <th>Schoolyr</th>
+                    <th>Options</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
 					  
 					  function get_level($level_id){
 						global $mydb;
@@ -41,17 +43,22 @@
 							//   echo '</tr>';
 
 							echo '<td><a href = "index.php?page=4&studentId='.$schoolyr->IDNO.'&SY='.$schoolyr->AY.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'">Registered Courses</a>
-							<a href = "trans2.php?&studentId='.$schoolyr->IDNO.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'&ay='.$schoolyr->AY.'&ay='.$schoolyr->AY.'">Vew Transcript</a></td>';
+							<a href = "index.php?page=5&studentId='.$schoolyr->IDNO.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'&ay='.$schoolyr->AY.'&ay='.$schoolyr->AY.'">Vew Transcript</a></td>';
 							echo '</tr>';
 						  } 
 				  	?>
-				  </tbody>
-				  <tfoot>
-				  	<tr><td></td><td></td></tr>
-				  </tfoot>	
-				</table>
-			
-				</form>
-	  	</div><!--End of well-->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
 
-</div><!--End of container-->
+    </form>
+</div>
+<!--End of well-->
+
+</div>
+<!--End of container-->

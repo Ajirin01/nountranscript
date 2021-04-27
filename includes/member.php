@@ -29,7 +29,7 @@ class User{
 		$mydb->setQuery("SELECT * FROM `useraccounts` WHERE `ACCOUNT_USERNAME`='" . $email . "' and `ACCOUNT_PASSWORD`='" . $h_upass ."' and `STATUS`='confirmed' LIMIT 1");
 		$cur = $mydb->executeQuery();
 		$row_count = $mydb->num_rows($cur);//get the number of count
-		 if ($row_count == 1){
+		 if ($row_count > 0){
 		 $found_user = $mydb->loadSingleResult();
 		    $_SESSION['ACCOUNT_ID'] 	 = $found_user->ACCOUNT_ID;
             $_SESSION['ACCOUNT_NAME']    = $found_user->ACCOUNT_NAME;

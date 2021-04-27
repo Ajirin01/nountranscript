@@ -38,6 +38,7 @@ require_once(LIB_PATH.DS."instructorclasses.php");
 require_once(LIB_PATH.DS."studSubjects.php");
 require_once(LIB_PATH.DS."grades.php");
 require_once(LIB_PATH.DS."room.php");
+require_once(LIB_PATH.DS."transcript-process.php");
 // require_once(LIB_PATH.DS."ID.php");
 
 

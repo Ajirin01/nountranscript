@@ -1,22 +1,25 @@
 <div class="container">
-<div class="well">
+    <div class="well">
 
-			    <form action="controller.php?action=delsy&studentId=<?php echo $_GET['studentId']; ?>" Method="POST">  					
-				<table class="table table-hover">
-					<caption><h3 align="left">Student Enrollment Records</h3></caption>
-				  <thead>
-				  	<tr>
-				  		<th> <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');"> Grade and Section</th>
-				  	<!--	<th>Semester</th>-->
-				  		<th>Schoolyr</th>
-				  		<th>Status</th>
-				  		<th>Date Enrolled</th>
-				  		<th>Options</th>
-				 
-				  	</tr>	
-				  </thead>
-				  <tbody>
-					  <?php 
+        <form action="controller.php?action=delsy&studentId=<?php echo $_GET['studentId']; ?>" Method="POST">
+            <table class="table table-hover">
+                <caption>
+                    <h3 align="left">Student Enrollment Records</h3>
+                </caption>
+                <thead>
+                    <tr>
+                        <th> <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');">
+                            Grade and Section</th>
+                        <!--	<th>Semester</th>-->
+                        <th>Schoolyr</th>
+                        <th>Status</th>
+                        <th>Date Enrolled</th>
+                        <th>Options</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
 					  function get_level($level_id){
 						  global $mydb;
 						$mydb->setQuery("SELECT * FROM `level` WHERE YR_ID='$level_id' ");
@@ -51,14 +54,16 @@
 				  		// echo '<td><a href = "index.php?view=subject&studentId='.$schoolyr->IDNO.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'">Enrolled Course</a>
 				  		// <a href = "trans.php?studentId='.$schoolyr->IDNO.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'&ay='.$schoolyr->AY.'">Vew Transcript</a></td>';
 						  echo '<td><a href = "index.php?view=subject&studentId='.$schoolyr->IDNO.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'">Enrolled Course</a>
-				  		<a href = "index.php?view=transcript&studentId='.$schoolyr->IDNO.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'&ay='.$schoolyr->AY.'">Vew Transcript</a></td>';
+				  		// <a href = "index.php?view=trans&studentId='.$schoolyr->IDNO.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'&ay='.$schoolyr->AY.'">Vew Transcript</a></td>';
+						//   echo '</tr>';
+						'<a href = "/admin/modules/student/trans?studentId='.$schoolyr->IDNO.'&cid='.$schoolyr->COURSE_ID.'&sy='.$schoolyr->SYID.'&ay='.$schoolyr->AY.'">Vew Transcript</a></td>';
 						  echo '</tr>';
 				  	} 
 				  	?>
-				  </tbody>
-				 	
-				</table>
-				<?php
+                </tbody>
+
+            </table>
+            <?php
 				if($_SESSION['ACCOUNT_TYPE']=='Administrator') {
 		
 			echo   '<div class="btn-group">
@@ -68,7 +73,9 @@
 				
 				 }
 				?>
-				</form>
-	  	</div><!--End of well-->
+        </form>
+    </div>
+    <!--End of well-->
 
-</div><!--End of container-->
+</div>
+<!--End of container-->

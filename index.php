@@ -24,7 +24,7 @@ switch ($view) {
 				
      case '5' :
 	    $title="transcript";	
-		$content='trans.php';
+		$content='trans2.php';
 		break;	
 
 	case '7' :
@@ -44,6 +44,7 @@ switch ($view) {
 		$content ='home.php';		
 }
 
-require_once 'theme/frontendTemplate.php';
-require_once 'includes/ID.php';
+// require_once 'theme/frontendTemplate.php';
+require_once 'theme/frontend-test.php';
+// require_once 'includes/ID.php';
 ?>

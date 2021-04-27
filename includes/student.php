@@ -20,7 +20,7 @@ class Student {
 		global $mydb;
 		$mydb->setQuery("SELECT * 
 						FROM  `tblstudent` 
-	WHERE  `IDNO` ='{$idno}' AND `PASSWORD`='{$pd}' AND `ADMISSION_STATUS`='confrimed'" );
+	WHERE  `IDNO` ='{$idno}' AND `PASSWORD`='{$pd}' AND `ADMISSION_STATUS`='confrimed' OR `ADMISSION_STATUS`='graduated'" );
 		$cur = $mydb->executeQuery();
 		$row_count = $mydb->num_rows($cur);//get the number of count
 		 if ($row_count == 1){

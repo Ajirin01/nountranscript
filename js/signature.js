@@ -194,7 +194,7 @@ var el = document.getElementById('el')
  
      mywindow.document.close(); // necessary for IE >= 10
      mywindow.focus(); // necessary for IE >= 10*/
- 
+    // console.log(mywindow)
      mywindow.print();
      mywindow.close();
  
@@ -204,4 +204,17 @@ $('.print-btn').on('click', function(){
   console.log('print button clicked')
   PrintElem('el')
 })
+
+$('.save-btn').on('click', function(){
+  console.log('save button clicked')
+  console.log($('#signature').attr('src'))
+  var iuts = document.getElementById('image-url-to-submit')
+  iuts.innerText = $('#signature').attr('src')
+  console.log(iuts.innerText)
+  $('#process-form').submit();
+})
+
+// signature.onchange = () => {
+//  console.log("signature image changed")
+// }
 })();

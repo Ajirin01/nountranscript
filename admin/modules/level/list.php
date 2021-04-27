@@ -2,20 +2,23 @@
 		check_message();
 			
 		?>
-		<div class="well">
+<div class="col-12">
 
-			    <form action="controller.php?action=delete" Method="POST">  					
-				<table class="table table-hover">
-					<caption><h3 align="left">List of levels</h3></caption>
-				  <thead>
-				  	<tr>
-				  		<th> <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');"> level</th>
-				  		<th>level Description</th>
-				 
-				  	</tr>	
-				  </thead>
-				  <tbody>
-				  	<?php 
+    <form action="controller.php?action=delete" Method="POST">
+        <table class="table table-hover">
+            <caption>
+                <h3 align="left">List of levels</h3>
+            </caption>
+            <thead>
+                <tr>
+                    <th> <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');">
+                        level</th>
+                    <th>level Description</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
 				  		$Level = new Level();
 						$cur = $Level->allLevel();
 						if( count($cur) > 0){
@@ -32,12 +35,15 @@
 						echo "<td>no records</td>";
 					}
 				  	?>
-				  </tbody>
-				  <tfoot>
-				  	<tr><td></td><td></td></tr>
-				  </tfoot>	
-				</table>
-				<?php
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        <?php
 				if($_SESSION['ACCOUNT_TYPE']=='Administrator'){
 						echo '
 				<div class="btn-group">
@@ -46,7 +52,9 @@
 				</div>';
 			}
 			?>
-				</form>
-	  	</div><!--End of well-->
+    </form>
+</div>
+<!--End of well-->
 
-</div><!--End of container-->
+</div>
+<!--End of container-->

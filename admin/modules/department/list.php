@@ -2,20 +2,23 @@
 		check_message();
 			
 		?>
-		<div class="well">
+<div class="col-12">
 
-			    <form action="controller.php?action=delete" Method="POST">  					
-				<table class="table table-hover">
-					<caption><h3 align="left">List of Department</h3></caption>
-				  <thead>
-				  	<tr>
-				  		<th> <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');"> Department Name</th>
-				  		<th>Department Description</th>
-				 
-				  	</tr>	
-				  </thead>
-				  <tbody>
-				  	<?php 
+    <form action="controller.php?action=delete" Method="POST">
+        <table class="table table-hover">
+            <caption>
+                <h3 align="left">List of Department</h3>
+            </caption>
+            <thead>
+                <tr>
+                    <th> <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');">
+                        Department Name</th>
+                    <th>Department Description</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
 				  		$dept = new Dept();
 						$cur = $dept->listOfDept();
 						foreach ($cur as $Department) {
@@ -27,12 +30,15 @@
 				  		echo '</tr>';
 				  	} 
 				  	?>
-				  </tbody>
-				  <tfoot>
-				  	<tr><td></td><td></td></tr>
-				  </tfoot>	
-				</table>
-				<?php
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+        <?php
 				if($_SESSION['ACCOUNT_TYPE']=='Administrator'){
 						echo '
 				<div class="btn-group">
@@ -41,7 +47,9 @@
 				</div>';
 			}
 			?>
-				</form>
-	  	</div><!--End of well-->
+    </form>
+</div>
+<!--End of well-->
 
-</div><!--End of container-->
+</div>
+<!--End of container-->

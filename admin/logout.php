@@ -16,7 +16,7 @@ if(isset($_COOKIE[session_name()])) {
 // 4. Destroy the session
 session_destroy();?>
 <script type="text/javascript">
-		window.location = "index.php?logout=1";
-	</script>
-	<?php	
+window.location = "login2.php";
+</script>
+<?php	
 ?>

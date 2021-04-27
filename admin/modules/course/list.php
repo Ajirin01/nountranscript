@@ -1,26 +1,27 @@
 <div class="container">
-<div class="wells">
-		<h3 align="left">List of Course</h3>
-			    <form action="controller.php?action=delete" Method="POST">  					
-				<table id="example" class="table table-striped" cellspacing="0">
-				
-				  <thead>
-				  	<tr>
-				  		<th>No.</th>
-				  		<th>
-				  		 <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');"> 
-				  		 Course</th>
-				  		<th>Description</th>
-				  		<th>Unit</th>
-				  	
-				  		<th>Semester</th>
-				 		<th>Grade Level</th>
-				 		<th>Pre-requisite</th>
-				 	<!--	<th>Level</th>-->
-				  	</tr>	
-				  </thead>
-				  <tbody>
-				  	<?php
+    <div class="col-12">
+        <h3 align="left">List of Course</h3>
+        <form action="controller.php?action=delete" Method="POST">
+            <table id="example" class="table table-striped" cellspacing="0">
+
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>
+                            <input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');">
+                            Course
+                        </th>
+                        <th>Description</th>
+                        <th>Unit</th>
+
+                        <th>Semester</th>
+                        <th>Grade Level</th>
+                        <th>Pre-requisite</th>
+                        <!--	<th>Level</th>-->
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
 				  	
 					  		// $mydb->setQuery("SELECT * 
 							// 				FROM  `subject` s,  `course` c
@@ -58,10 +59,10 @@
 					  		}
 					  	} 
 				  	?>
-				  </tbody>
-				
-				</table>
-				<?php
+                </tbody>
+
+            </table>
+            <?php
 				if($_SESSION['ACCOUNT_TYPE']=='Administrator'){
 						echo '
 				<div class="btn-group">
@@ -71,7 +72,9 @@
 				</div>';
 			}
 				?>
-				</form>
-	  	</div><!--End of well-->
+        </form>
+    </div>
+    <!--End of well-->
 
-</div><!--End of container-->
+</div>
+<!--End of container-->

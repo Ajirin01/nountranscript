@@ -1,24 +1,25 @@
 <div class="container">
-		<div class="wells">
-				<h3 align="left">List of Student</h3>
-			    <form action="controller.php?action=delete" Method="POST">  					
-					<table id="example" class="table table-striped" cellspacing="0">
-				
-				  <thead>
-				  	<tr>
-				  		<th>No.</th>
-				  		<th width="10%" align="left"><input type="checkbox" name="chkall" id="chkall" onclick="return checkall('selector[]');"> ID#.</th>
-				  		<th>Fullname</th>
-				  		<th>Sex</th>
-				  		<th>Age</th>
-				  		<th>Birth Date</th>
-				  		<th>Email Address</th>
-						<th>Admission Status</th>
-				  		<th>Options</th>
-				  	</tr>	
-				  </thead>
-				  <tbody>
-				  	<?php
+    <div class="wells">
+        <h3 align="left">List of Student</h3>
+        <form action="controller.php?action=delete" Method="POST">
+            <table id="example" class="table table-striped" cellspacing="0">
+
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th width="10%" align="left"><input type="checkbox" name="chkall" id="chkall"
+                                onclick="return checkall('selector[]');"> ID#.</th>
+                        <th>Fullname</th>
+                        <th>Sex</th>
+                        <th>Age</th>
+                        <th>Birth Date</th>
+                        <th>Email Address</th>
+                        <th>Admission Status</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
 				  	
 				  	  	$mydb->setQuery("SELECT  `IDNO` ,UPPER(CONCAT(  `LNAME` ,  ', ',  `FNAME` ,  ' ',  `MNAME`)) AS  'Name',
 				  						  `SEX` ,`AGE`, `BDAY` ,  `STATUS` ,  `EMAIL`, `ADMISSION_STATUS`
@@ -49,10 +50,10 @@
 				  	?>
 
 
-				  </tbody>
-				 
-				</table>
-				<?php 
+                </tbody>
+
+            </table>
+            <?php 
 					if($_SESSION['ACCOUNT_TYPE']=='Administrator'){
 						echo '
 						<div class="btn-group">
@@ -64,7 +65,9 @@
 					}
 
 				?>
-				</form>
-	  	</div><!--End of well-->
+        </form>
+    </div>
+    <!--End of well-->
 
-</div><!--End of container-->
+</div>
+<!--End of container-->
