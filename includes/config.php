@@ -14,8 +14,8 @@
 
 //production configurations
 defined('DB_SERVER') ? null : define("DB_SERVER","localhost");//define our database server
-defined('DB_USER') ? null : define("DB_USER","nountran_nountran");		  //define our database user	
-defined('DB_PASS') ? null : define("DB_PASS","4BApf62]uq[1YD");			  //define our database Password	
+defined('DB_USER') ? null : define("DB_USER","nountran_ajirin");		  //define our database user	
+defined('DB_PASS') ? null : define("DB_PASS","bX5@]S]TrN,n");			  //define our database Password	
 defined('DB_NAME') ? null : define("DB_NAME","nountran_transcript_db"); //define our database Name
 
 $thisFile = str_replace('\\', '/', __FILE__);

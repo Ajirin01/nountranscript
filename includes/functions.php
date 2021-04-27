@@ -34,7 +34,7 @@
 		return strftime("%B %d, %Y at %I:%M %p", $nicetime);	
 					
 	}
-	function __autoload($class_name) {
+	function myAutoload($class_name) {
 		$class_name = strtolower($class_name);
 		$path = LIB_PATH.DS."{$class_name}.php";
 		if(file_exists($path)){
@@ -44,6 +44,7 @@
 		}
 					
 	}
+	spl_autoload_register('myAutoload');
 	function make_year($years, $start){
 		$year = "<option value=".($start)."-".($start+1).">".($start)."-".($start+1)."</option>";
 		for($i=1; $i<$years; $i++){
